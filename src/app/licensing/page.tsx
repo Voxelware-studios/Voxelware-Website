@@ -1051,37 +1051,32 @@ export default function LicensingPage() {
             </>
           ) : (
             <>
+              <ScrollReveal className="text-center mb-8">
+                <h2 className="text-2xl font-bold mb-2">
+                  Voxelware Community License v1.0
+                </h2>
+                <p className="text-sm text-muted">
+                  Last Updated: 06 September 2026
+                </p>
+              </ScrollReveal>
+
               <ScrollReveal className="mb-8">
                 <div className="glass rounded-xl p-8">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <Badge variant="gradient">Community Edition</Badge>
-                        <Badge variant="secondary">VCL 1.0</Badge>
-                      </div>
-                      <h2 className="text-2xl font-bold mb-1">
-                        Voxelware Community License
-                      </h2>
-                      <p className="text-sm text-muted">
-                        Last updated: September 2026
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 shrink-0">
-                      <button
-                        onClick={handleCopyLicense}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
-                      >
-                        {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
-                        {copied ? "Copied!" : "Copy License"}
-                      </button>
-                      <button
-                        onClick={handleDownloadLicense}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
-                      >
-                        <Download className="w-4 h-4" />
-                        Download
-                      </button>
-                    </div>
+                  <div className="flex items-center justify-end gap-2 mb-6">
+                    <button
+                      onClick={handleCopyLicense}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
+                    >
+                      {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
+                      {copied ? "Copied!" : "Copy License"}
+                    </button>
+                    <button
+                      onClick={handleDownloadLicense}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download
+                    </button>
                   </div>
 
                   <p className="text-muted leading-relaxed mb-6">

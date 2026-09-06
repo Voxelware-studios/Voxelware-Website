@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import {
-  Search,
   FileText,
   Scale,
   Ban,
@@ -26,7 +25,6 @@ import {
   Download,
   Check,
 } from "lucide-react"
-import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { PageTransition } from "@/components/shared/page-transition"
 import { ScrollReveal } from "@/components/shared/scroll-reveal"
@@ -1054,7 +1052,6 @@ Copyright © 2026 Voxelware Studios. All rights reserved.`
 
 export default function LicensingPage() {
   const [activeLicense, setActiveLicense] = useState<LicenseType>("proprietary")
-  const [search, setSearch] = useState("")
   const [activeSection, setActiveSection] = useState("grant-of-license")
   const [copied, setCopied] = useState(false)
   const [copiedVPL, setCopiedVPL] = useState(false)
@@ -1139,7 +1136,6 @@ export default function LicensingPage() {
               <button
                 onClick={() => {
                   setActiveLicense("proprietary")
-                  setSearch("")
                   setActiveSection("grant-of-license")
                 }}
                 className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all ${
@@ -1153,7 +1149,6 @@ export default function LicensingPage() {
               <button
                 onClick={() => {
                   setActiveLicense("community")
-                  setSearch("")
                   setActiveSection("definitions")
                 }}
                 className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all ${
@@ -1178,17 +1173,7 @@ export default function LicensingPage() {
                 </p>
               </ScrollReveal>
 
-          <div className="relative max-w-sm mx-auto mb-12">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
-            <Input
-              placeholder="Search license..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="pl-10"
-            />
-          </div>
-
-          <div className="grid lg:grid-cols-4 gap-8">
+              <div className="grid lg:grid-cols-4 gap-8">
             <ScrollReveal direction="left" className="lg:col-span-1">
               <nav className="sticky top-24 glass-strong rounded-xl p-4 max-h-[70vh] overflow-y-auto">
                 <h3 className="text-sm font-semibold mb-3 px-3">Sections</h3>

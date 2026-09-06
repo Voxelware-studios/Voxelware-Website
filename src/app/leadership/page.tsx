@@ -8,22 +8,22 @@ import { MeshGradient } from "@/components/shared/mesh-gradient"
 
 const leadership = [
   {
-    name: "Akram",
-    alias: "Membercatcousin",
-    role: "Founder",
-    accent: "Founder of Voxelware Studios",
-    description:
-      "Membercatcousin is the Founder of Voxelware Studios. He established the studio with the vision of creating high-quality software, powerful developer tools, and innovative infrastructure for the Minecraft community. His vision laid the foundation of the company and continues to inspire its long-term direction and values.",
-    image: "/images/membercatcousin.png",
-  },
-  {
     name: "Jeyakasinathan",
     alias: "Frontman",
-    role: "Owner & CEO",
-    accent: "Owner & CEO of Voxelware Studios",
+    role: "Owner & Sr. Developer",
+    accent: "Owner & Sr. Developer of Voxelware Studios",
     description:
-      "As Owner and CEO of Voxelware Studios, Jeyakasinathan, also known as Frontman, leads the company's long-term vision, product strategy, and technical innovation. His focus is on delivering high-quality software, infrastructure, and developer tools that empower modern Minecraft ecosystems.",
+      "As Owner and Sr. Developer of Voxelware Studios, Jeyakasinathan, also known as Frontman, leads the company's long-term vision, product strategy, and technical innovation. His focus is on delivering high-quality software, infrastructure, and developer tools that empower modern Minecraft ecosystems.",
     image: "/images/fm.jpg",
+  },
+  {
+    name: "Akram",
+    alias: "Membercatcousin",
+    role: "Founder & Studio Head",
+    accent: "Founder & Studio Head of Voxelware Studios",
+    description:
+        "Membercatcousin is the Founder of Voxelware Studios. He established the studio with the vision of creating high-quality software, powerful developer tools, and innovative infrastructure for the Minecraft community. His vision laid the foundation of the company and continues to inspire its long-term direction and values.",
+    image: "/images/membercatcousin.png",
   },
 ]
 

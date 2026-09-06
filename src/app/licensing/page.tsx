@@ -34,6 +34,8 @@ import { PageTransition } from "@/components/shared/page-transition"
 import { ScrollReveal } from "@/components/shared/scroll-reveal"
 import { MeshGradient } from "@/components/shared/mesh-gradient"
 
+type LicenseType = "proprietary" | "community"
+
 const proprietarySections = [
   {
     id: "grant-of-license",
@@ -1053,6 +1055,7 @@ By downloading, purchasing, installing, or using the Software, you acknowledge t
 Copyright © 2026 Voxelware Studios. All rights reserved.`
 
 export default function LicensingPage() {
+  const [activeLicense, setActiveLicense] = useState<LicenseType>("proprietary")
   const [search, setSearch] = useState("")
   const [activeSection, setActiveSection] = useState("grant-of-license")
   const [vclExpanded, setVclExpanded] = useState(false)
@@ -1134,14 +1137,50 @@ export default function LicensingPage() {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2">
-              Voxelware Proprietary License v1.1
-            </h2>
-            <p className="text-sm text-muted">
-              Last Updated: 13 June 2026
-            </p>
+          <ScrollReveal className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-1 p-1 glass-strong rounded-xl">
+              <button
+                onClick={() => {
+                  setActiveLicense("proprietary")
+                  setSearch("")
+                  setActiveSection("grant-of-license")
+                }}
+                className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                  activeLicense === "proprietary"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted hover:text-white hover:bg-white/5"
+                }`}
+              >
+                Proprietary License
+              </button>
+              <button
+                onClick={() => {
+                  setActiveLicense("community")
+                  setSearch("")
+                  setActiveSection("definitions")
+                  setVclExpanded(false)
+                }}
+                className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                  activeLicense === "community"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted hover:text-white hover:bg-white/5"
+                }`}
+              >
+                Community License
+              </button>
+            </div>
           </ScrollReveal>
+
+          {activeLicense === "proprietary" ? (
+            <>
+              <ScrollReveal className="text-center mb-8">
+                <h2 className="text-2xl font-bold mb-2">
+                  Voxelware Proprietary License v1.1
+                </h2>
+                <p className="text-sm text-muted">
+                  Last Updated: 13 June 2026
+                </p>
+              </ScrollReveal>
 
           <div className="relative max-w-sm mx-auto mb-12">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
@@ -1228,11 +1267,9 @@ export default function LicensingPage() {
               </div>
             </div>
           </div>
-
-          <div className="my-16">
-            <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-          </div>
-
+            </>
+          ) : (
+            <>
           <ScrollReveal className="text-center mb-8">
             <h2 className="text-2xl font-bold mb-2">
               Voxelware Community License v1.0
@@ -1382,6 +1419,8 @@ export default function LicensingPage() {
                 </div>
               </div>
             </div>
+          )}
+            </>
           )}
         </div>
       </section>

@@ -64,7 +64,7 @@ export default function DiscordPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg">Voxelware Community</h3>
-                      <p className="text-sm text-muted">1,200+ members</p>
+                      <p className="text-sm text-muted">12+ members</p>
                     </div>
                   </div>
 

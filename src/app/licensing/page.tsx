@@ -22,6 +22,11 @@ import {
   Users,
   DollarSign,
   Copyright,
+  ChevronDown,
+  ChevronUp,
+  Copy,
+  Download,
+  Check,
 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
@@ -453,20 +458,465 @@ Permission for activities not expressly permitted by this License must be obtain
   },
 ]
 
+const vclFullText = `VOXELWARE COMMUNITY LICENSE (VCL)
+Version 1.0
+Last updated 06 September 2026
+
+Copyright © 2026 Voxelware Studios and the Original Author.
+All rights reserved.
+
+
+=====================================================================
+TERMS AND CONDITIONS FOR USE, COPYING, MODIFICATION, AND DISTRIBUTION
+=====================================================================
+
+
+1. DEFINITIONS
+
+
+"Software" means the Voxelware Studios Community Edition ("CE") project
+or component distributed under this License.
+
+
+"Original Author" means the individual or organization identified in the
+Software's copyright notice or official project documentation as the
+original author or copyright holder of the Software.
+
+
+"Voxelware" means Voxelware Studios, the publisher and steward of this
+License.
+
+
+"Original Software" means the Software as originally distributed by the
+Original Author.
+
+
+"Derivative Work" means any modified, forked, ported, adapted, extended,
+or otherwise derived version of the Software that contains or is based
+substantially upon the Software's code.
+
+
+"Redistribution" means making the Software or a Derivative Work available
+to another person or entity, including through downloads, repositories,
+mirrors, package managers, compiled builds, or other distribution methods.
+
+
+
+
+2. PERMISSION
+
+
+Subject to the terms and conditions of this License, the Original Author
+and Voxelware grant you a limited, non-exclusive, worldwide license to:
+
+
+- Use the Software.
+- View and study the source code.
+- Modify the Software.
+- Compile and build the Software.
+- Create private forks and Derivative Works.
+- Create and distribute Derivative Works in accordance with this License.
+- Submit modifications, fixes, documentation, and other contributions
+  to the official project.
+
+
+All rights not expressly granted by this License are reserved by the
+Original Author and/or Voxelware, as applicable.
+
+
+
+
+3. CREDITS AND ATTRIBUTION
+
+
+All copies and Derivative Works must retain:
+
+
+- The original copyright notices.
+- This License.
+- Clear attribution to the Original Author.
+- Clear attribution to the applicable Voxelware CE project.
+
+
+A Redistributed Derivative Work must clearly and prominently state that
+it is derived from the Original Software.
+
+
+The attribution must be reasonably visible to normal users and must not
+be intentionally hidden, removed, or altered in a manner intended to
+conceal the origin of the Software.
+
+
+At minimum, a Derivative Work should include a statement substantially
+similar to:
+
+
+"This project is a derivative work of [PROJECT NAME] by [ORIGINAL AUTHOR]
+and is licensed under the Voxelware Community License."
+
+
+
+
+4. FORKING AND REBRANDING
+
+
+Forking, modifying, and rebranding the Software is permitted provided
+that all requirements of this License are followed.
+
+
+A Derivative Work may use its own project name, branding, and identity,
+provided that it clearly informs users that it is a Derivative Work of
+the Original Software.
+
+
+A Derivative Work must not:
+
+
+- Present itself as the Original Software.
+- Claim to be an official release of the Original Author or Voxelware.
+- Imply endorsement, sponsorship, or affiliation with the Original Author
+  or Voxelware without permission.
+- Remove required attribution.
+- Intentionally conceal its origin from users.
+
+
+The names, logos, trademarks, and branding belonging to Voxelware,
+the Original Author, or the Software may be used for truthful attribution
+where permitted, but may not be used in advertising or marketing in a
+manner that implies official endorsement.
+
+
+5. PACKAGE AND NAMESPACE
+
+
+The original package names and namespaces of the Software must not be
+renamed, removed, or replaced in a Redistributed Derivative Work.
+
+
+Changing package names or namespaces does not remove the requirement to
+identify the Derivative Work as being based upon the Original Software.
+
+
+Private modifications may be made for internal purposes, but no such
+modification grants permission to misrepresent or conceal the origin of
+the Software when it is subsequently Redistributed.
+
+
+
+
+6. REDISTRIBUTION
+
+
+Redistribution of any Voxelware Community Edition Software or Derivative
+Work is permitted only when all requirements of this License are followed.
+
+
+Any person or organization Redistributing a CE Software or Derivative Work
+must make the complete corresponding source code publicly available in a
+Git repository that is accessible to users of the Redistributed Software.
+
+
+The public repository must contain sufficient source code to reproduce the
+Redistributed Software, including applicable modifications made to the
+Voxelware CE Software.
+
+
+Any Redistributed copy or Derivative Work must:
+
+
+- Include this License.
+- Preserve all required copyright notices.
+- Provide clear attribution to the Original Author.
+- Identify the applicable Voxelware CE project.
+- Clearly identify itself as a Derivative Work where applicable.
+- Provide a public Git repository containing the corresponding source code.
+- Comply with all other requirements of this License.
+
+
+Redistribution without publicly available corresponding source code is
+prohibited.
+
+
+The source repository must not intentionally omit modifications or other
+covered source code in order to conceal the origin or functionality of the
+Redistributed Software.
+
+
+7. SAME-LICENSE REQUIREMENT
+
+
+Any Derivative Work containing or substantially based upon code covered
+by this License and distributed to another person or entity must itself
+be distributed under the Voxelware Community License (VCL).
+
+
+The distributor must provide recipients with the rights and restrictions
+of this License.
+
+
+A Derivative Work may not be distributed under another license, including
+MIT, Apache, GNU GPL, BSD, or a proprietary/custom license, where doing
+so would remove, conflict with, or bypass the requirements of this
+License.
+
+
+Third-party components that are not covered by this License remain
+subject to their respective licenses.
+
+
+
+
+8. COMMERCIAL USE AND MONETIZATION
+
+
+Private or internal commercial use of the Software is permitted.
+
+
+However, the Software and any Derivative Work may not be sold, rented,
+leased, sublicensed, monetized, or otherwise commercially exploited
+without prior written permission from the Original Author and/or
+Voxelware, as applicable.
+
+
+In particular, a fork or Derivative Work may not:
+
+
+- Be sold as a paid download.
+- Be offered through a paid subscription.
+- Be placed behind a paywall.
+- Be monetized through advertisements, donations, sponsorships, or
+  similar mechanisms where the fork or Derivative Work itself is the
+  subject of the monetized offering.
+- Be bundled into a paid software product for the purpose of commercially
+  exploiting the Derivative Work.
+- Be commercially licensed or sublicensed.
+
+
+Voxelware and the Original Author retain the right to commercially
+distribute, license, monetize, or offer premium versions of their
+respective Software.
+
+
+9. REPUTATION, IMPERSONATION, MALICIOUS USE, AND ENFORCEMENT
+
+
+The Software and Derivative Works may not intentionally be used to:
+
+
+- Impersonate Voxelware, the Original Author, or an official project.
+- Deceive users regarding the origin or authorship of the Software.
+- Distribute malicious functionality while falsely attributing it to
+  Voxelware or the Original Author.
+- Intentionally conceal substantial copying of the Software.
+- Intentionally misrepresent a Derivative Work as the Original Software.
+- Intentionally damage the integrity of the Software or falsely associate
+  harmful activity with the Original Author or Voxelware.
+
+
+Voxelware Studios reserves the right to request the removal or cessation
+of any Fork, Redistribution, or Derivative Work where Voxelware reasonably
+determines that its continued distribution:
+
+
+- Violates this License;
+- Creates a significant risk of harm to users or the Software;
+- Misrepresents Voxelware, the Original Author, or the Software;
+- Infringes or threatens Voxelware's intellectual-property rights;
+- Circumvents the commercial or licensing restrictions of this License;
+- Materially interferes with Voxelware's legitimate commercial offerings
+  or monetization of the Software; or
+- Otherwise creates a substantial and legitimate concern regarding the
+  protection, integrity, security, or sustainability of the Voxelware
+  CE ecosystem.
+
+
+Where appropriate and legally available, Voxelware may request hosting
+providers, repository providers, distributors, or other relevant parties
+to remove or disable access to the violating material.
+
+
+Voxelware Studios reserves the right to take appropriate legal action and
+pursue any remedies available under applicable law.
+
+
+Nothing in this section grants Voxelware the right to remove a Derivative
+Work solely because Voxelware disagrees with criticism, opinions, reviews,
+or lawful commentary concerning the Software.
+
+
+10. UPSTREAM INTEGRATION AND CONTRIBUTIONS
+
+
+By submitting code, documentation, fixes, or other contributions to an
+official Voxelware CE project, you grant the Original Author and
+Voxelware a perpetual, worldwide, non-exclusive, royalty-free license
+to use, reproduce, modify, adapt, incorporate, sublicense, and distribute
+your contribution as part of the Software.
+
+
+This includes Community Edition, Premium Edition, Enterprise Edition,
+and other editions or products maintained by Voxelware or the Original
+Author.
+
+
+You represent that you have the necessary rights to submit the
+contribution under these terms.
+
+
+Submitting a contribution does not grant permission to redistribute the
+Software outside the terms of this License.
+
+
+
+
+11. THIRD-PARTY COMPONENTS
+
+
+Third-party libraries, dependencies, assets, and other components remain
+subject to their respective licenses.
+
+
+This License does not remove or restrict rights granted by applicable
+third-party licenses that cannot legally be restricted by this License.
+
+
+Where third-party code is incorporated into a Derivative Work, all
+applicable third-party license requirements must continue to be respected.
+
+
+
+
+12. OWNERSHIP
+
+
+The Software is licensed, not sold.
+
+
+No ownership or intellectual-property rights are transferred under this
+License.
+
+
+Copyright and other intellectual-property rights in the Software remain
+with the Original Author, Voxelware, or their respective owners.
+
+
+
+
+13. TRADEMARKS
+
+
+This License does not grant trademark rights.
+
+
+"Voxelware Studios", Voxelware project names, logos, "CoreTuff", and
+other trademarks remain the property of their respective owners.
+
+
+Use of such trademarks for truthful attribution is permitted where
+required by this License.
+
+
+Use that implies endorsement, sponsorship, official status, or
+affiliation requires prior written permission from the applicable
+trademark owner.
+
+
+14. TERMINATION
+
+
+This License automatically terminates upon a material violation of its
+terms.
+
+
+Upon termination, all rights granted under this License cease, and the
+violating party must stop using and Redistributing the Software and
+applicable Derivative Works, except where otherwise required by law.
+
+
+Voxelware and/or the Original Author may restore rights at their
+discretion after the violation has been corrected.
+
+
+15. DISCLAIMER OF WARRANTY
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW.
+
+
+IN NO EVENT SHALL VOXELWARE STUDIOS, THE ORIGINAL AUTHOR, OR ANY
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY
+ARISING FROM OR RELATED TO THE SOFTWARE OR ITS USE, EXCEPT WHERE SUCH
+LIABILITY CANNOT LEGALLY BE EXCLUDED.
+
+
+
+
+16. RESERVATION OF RIGHTS
+
+
+Any rights not expressly granted by this License are reserved by the
+Original Author and Voxelware.
+
+
+Permission for activities not expressly permitted by this License must
+be obtained in writing from the applicable rights holder.
+
+
+=====================================================================
+
+
+VOXELWARE COMMUNITY LICENSE (VCL) 1.0
+
+
+Source Available
+Modification Permitted
+Forks and Derivative Works Permitted
+Redistribution Permitted Under VCL
+Attribution Required
+Commercial Monetization of Derivatives Requires Permission
+
+
+Copyright © 2026 Voxelware Studios and the Original Author.
+All rights reserved.`
+
 export default function LicensingPage() {
   const [activeLicense, setActiveLicense] = useState<LicenseType>("proprietary")
   const [search, setSearch] = useState("")
   const [activeSection, setActiveSection] = useState("grant-of-license")
+  const [vclExpanded, setVclExpanded] = useState(false)
+  const [copied, setCopied] = useState(false)
 
-  const sections = activeLicense === "proprietary" ? proprietarySections : communitySections
+  const handleCopyLicense = async () => {
+    try {
+      await navigator.clipboard.writeText(vclFullText)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      const textarea = document.createElement("textarea")
+      textarea.value = vclFullText
+      document.body.appendChild(textarea)
+      textarea.select()
+      document.execCommand("copy")
+      document.body.removeChild(textarea)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }
 
-  const filtered = search
-    ? sections.filter(
-        (s) =>
-          s.title.toLowerCase().includes(search.toLowerCase()) ||
-          s.content.toLowerCase().includes(search.toLowerCase())
-      )
-    : sections
+  const handleDownloadLicense = () => {
+    const blob = new Blob([vclFullText], { type: "text/plain" })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement("a")
+    a.href = url
+    a.download = "Voxelware-Community-License-VCL-1.0.txt"
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+    URL.revokeObjectURL(url)
+  }
 
   return (
     <PageTransition>
@@ -506,6 +956,7 @@ export default function LicensingPage() {
                   setActiveLicense("community")
                   setSearch("")
                   setActiveSection("definitions")
+                  setVclExpanded(false)
                 }}
                 className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all ${
                   activeLicense === "community"
@@ -518,96 +969,233 @@ export default function LicensingPage() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2">
-              {activeLicense === "proprietary"
-                ? "Voxelware Proprietary License v1.1"
-                : "Voxelware Community License (VCL) v1.0"}
-            </h2>
-            <p className="text-sm text-muted">
-              {activeLicense === "proprietary"
-                ? "Last Updated: 13 June 2026"
-                : "Last Updated: 06 September 2026"}
-            </p>
-          </ScrollReveal>
+          {activeLicense === "proprietary" ? (
+            <>
+              <ScrollReveal className="text-center mb-8">
+                <h2 className="text-2xl font-bold mb-2">
+                  Voxelware Proprietary License v1.1
+                </h2>
+                <p className="text-sm text-muted">
+                  Last Updated: 13 June 2026
+                </p>
+              </ScrollReveal>
 
-          <div className="relative max-w-sm mx-auto mb-12">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
-            <Input
-              placeholder="Search license..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="pl-10"
-            />
-          </div>
+              <div className="relative max-w-sm mx-auto mb-12">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
+                <Input
+                  placeholder="Search license..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
 
-          <div className="grid lg:grid-cols-4 gap-8">
-            <ScrollReveal direction="left" className="lg:col-span-1">
-              <nav className="sticky top-24 glass-strong rounded-xl p-4 max-h-[70vh] overflow-y-auto">
-                <h3 className="text-sm font-semibold mb-3 px-3">Sections</h3>
-                <div className="space-y-1">
-                  {sections.map((section) => (
-                    <button
-                      key={section.id}
-                      onClick={() => {
-                        setActiveSection(section.id)
-                        document
-                          .getElementById(section.id)
-                          ?.scrollIntoView({ behavior: "smooth" })
-                      }}
-                      className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-left transition-all ${
-                        activeSection === section.id
-                          ? "bg-primary/10 text-primary font-medium"
-                          : "text-muted hover:text-white hover:bg-white/5"
-                      }`}
-                    >
-                      <section.icon className="w-3.5 h-3.5 shrink-0" />
-                      {section.title}
-                    </button>
-                  ))}
-                </div>
-              </nav>
-            </ScrollReveal>
-
-            <div className="lg:col-span-3 space-y-8" key={activeLicense}>
-              {(search ? filtered : sections).map((section, i) => (
-                <motion.div
-                  key={section.id}
-                  id={section.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.03 }}
-                  viewport={{ once: true }}
-                  className="glass rounded-xl p-8 scroll-mt-24"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <section.icon className="w-5 h-5 text-primary" />
+              <div className="grid lg:grid-cols-4 gap-8">
+                <ScrollReveal direction="left" className="lg:col-span-1">
+                  <nav className="sticky top-24 glass-strong rounded-xl p-4 max-h-[70vh] overflow-y-auto">
+                    <h3 className="text-sm font-semibold mb-3 px-3">Sections</h3>
+                    <div className="space-y-1">
+                      {proprietarySections.map((section) => (
+                        <button
+                          key={section.id}
+                          onClick={() => {
+                            setActiveSection(section.id)
+                            document
+                              .getElementById(section.id)
+                              ?.scrollIntoView({ behavior: "smooth" })
+                          }}
+                          className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-left transition-all ${
+                            activeSection === section.id
+                              ? "bg-primary/10 text-primary font-medium"
+                              : "text-muted hover:text-white hover:bg-white/5"
+                          }`}
+                        >
+                          <section.icon className="w-3.5 h-3.5 shrink-0" />
+                          {section.title}
+                        </button>
+                      ))}
                     </div>
-                    <h2 className="text-xl font-bold">{section.title}</h2>
+                  </nav>
+                </ScrollReveal>
+
+                <div className="lg:col-span-3 space-y-8">
+                  {proprietarySections.map((section, i) => (
+                    <motion.div
+                      key={section.id}
+                      id={section.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.03 }}
+                      viewport={{ once: true }}
+                      className="glass rounded-xl p-8 scroll-mt-24"
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <section.icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <h2 className="text-xl font-bold">{section.title}</h2>
+                      </div>
+                      <div className="text-muted leading-relaxed whitespace-pre-line">
+                        {section.content}
+                      </div>
+                    </motion.div>
+                  ))}
+
+                  <motion.div className="glass rounded-xl p-8 border-primary/20 bg-primary/5">
+                    <p className="text-center text-sm text-muted italic">
+                      By downloading, purchasing, installing, or using the Software, you acknowledge that you have read, understood, and agree to be bound by this License.
+                    </p>
+                  </motion.div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <ScrollReveal className="mb-8">
+                <div className="glass rounded-xl p-8">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <Badge variant="gradient">Community Edition</Badge>
+                        <Badge variant="secondary">VCL 1.0</Badge>
+                      </div>
+                      <h2 className="text-2xl font-bold mb-1">
+                        Voxelware Community License
+                      </h2>
+                      <p className="text-sm text-muted">
+                        Last updated: September 2026
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <button
+                        onClick={handleCopyLicense}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
+                      >
+                        {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
+                        {copied ? "Copied!" : "Copy License"}
+                      </button>
+                      <button
+                        onClick={handleDownloadLicense}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
+                      >
+                        <Download className="w-4 h-4" />
+                        Download
+                      </button>
+                    </div>
                   </div>
-                  <div className="text-muted leading-relaxed whitespace-pre-line">
-                    {section.content}
-                  </div>
-                </motion.div>
-              ))}
-              {filtered.length === 0 && (
-                <div className="text-center py-20">
-                  <p className="text-muted">
-                    No sections found for &quot;{search}&quot;
+
+                  <p className="text-muted leading-relaxed mb-6">
+                    The Voxelware Community License (VCL) is the source-available community license used by Voxelware Studios Community Edition projects.
                   </p>
+
+                  <div className="grid sm:grid-cols-2 gap-3 mb-6">
+                    {[
+                      "Source available",
+                      "Modification permitted",
+                      "Forks and derivative works permitted",
+                      "Redistribution permitted under VCL",
+                      "Attribution required",
+                      "Public source repository required",
+                      "Derivative-work disclosure required",
+                      "Commercial monetization of derivatives requires permission",
+                    ].map((item) => (
+                      <div key={item} className="flex items-center gap-2 text-sm">
+                        <Check className="w-4 h-4 text-green-400 shrink-0" />
+                        <span className="text-muted">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-start gap-2 p-3 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
+                    <AlertTriangle className="w-4 h-4 text-yellow-400 shrink-0 mt-0.5" />
+                    <p className="text-sm text-yellow-200/80">
+                      VCL is a proprietary source-available license and is not an OSI-approved open-source license.
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              <div className="flex justify-center mb-8">
+                <button
+                  onClick={() => setVclExpanded(!vclExpanded)}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 transition-all"
+                >
+                  {vclExpanded ? (
+                    <>
+                      <ChevronUp className="w-4 h-4" />
+                      Hide Full License
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown className="w-4 h-4" />
+                      View Full License
+                    </>
+                  )}
+                </button>
+              </div>
+
+              {vclExpanded && (
+                <div className="grid lg:grid-cols-4 gap-8">
+                  <ScrollReveal direction="left" className="lg:col-span-1">
+                    <nav className="sticky top-24 glass-strong rounded-xl p-4 max-h-[70vh] overflow-y-auto">
+                      <h3 className="text-sm font-semibold mb-3 px-3">Sections</h3>
+                      <div className="space-y-1">
+                        {communitySections.map((section) => (
+                          <button
+                            key={section.id}
+                            onClick={() => {
+                              setActiveSection(section.id)
+                              document
+                                .getElementById(section.id)
+                                ?.scrollIntoView({ behavior: "smooth" })
+                            }}
+                            className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-left transition-all ${
+                              activeSection === section.id
+                                ? "bg-primary/10 text-primary font-medium"
+                                : "text-muted hover:text-white hover:bg-white/5"
+                            }`}
+                          >
+                            <section.icon className="w-3.5 h-3.5 shrink-0" />
+                            {section.title}
+                          </button>
+                        ))}
+                      </div>
+                    </nav>
+                  </ScrollReveal>
+
+                  <div className="lg:col-span-3 space-y-8">
+                    {communitySections.map((section, i) => (
+                      <motion.div
+                        key={section.id}
+                        id={section.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.03 }}
+                        viewport={{ once: true }}
+                        className="glass rounded-xl p-8 scroll-mt-24"
+                      >
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                            <section.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <h2 className="text-xl font-bold">{section.title}</h2>
+                        </div>
+                        <div className="text-muted leading-relaxed whitespace-pre-line">
+                          {section.content}
+                        </div>
+                      </motion.div>
+                    ))}
+
+                    <motion.div className="glass rounded-xl p-8 border-primary/20 bg-primary/5">
+                      <p className="text-center text-sm text-muted italic">
+                        By using, modifying, or redistributing the Software, you acknowledge that you have read, understood, and agree to be bound by the Voxelware Community License.
+                      </p>
+                    </motion.div>
+                  </div>
                 </div>
               )}
-
-              <motion.div className="glass rounded-xl p-8 border-primary/20 bg-primary/5">
-                <p className="text-center text-sm text-muted italic">
-                  {activeLicense === "proprietary"
-                    ? "By downloading, purchasing, installing, or using the Software, you acknowledge that you have read, understood, and agree to be bound by this License."
-                    : "By using, modifying, or redistributing the Software, you acknowledge that you have read, understood, and agree to be bound by the Voxelware Community License."}
-                </p>
-              </motion.div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
       </section>
     </PageTransition>

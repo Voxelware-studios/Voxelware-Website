@@ -22,8 +22,6 @@ import {
   Users,
   DollarSign,
   Copyright,
-  ChevronDown,
-  ChevronUp,
   Copy,
   Download,
   Check,
@@ -1058,7 +1056,6 @@ export default function LicensingPage() {
   const [activeLicense, setActiveLicense] = useState<LicenseType>("proprietary")
   const [search, setSearch] = useState("")
   const [activeSection, setActiveSection] = useState("grant-of-license")
-  const [vclExpanded, setVclExpanded] = useState(false)
   const [copied, setCopied] = useState(false)
   const [copiedVPL, setCopiedVPL] = useState(false)
 
@@ -1158,7 +1155,6 @@ export default function LicensingPage() {
                   setActiveLicense("community")
                   setSearch("")
                   setActiveSection("definitions")
-                  setVclExpanded(false)
                 }}
                 className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all ${
                   activeLicense === "community"
@@ -1274,152 +1270,86 @@ export default function LicensingPage() {
             <h2 className="text-2xl font-bold mb-2">
               Voxelware Community License v1.0
             </h2>
-            <p className="text-sm text-muted mb-4">
+            <p className="text-sm text-muted">
               Last Updated: 06 September 2026
             </p>
-            <div className="flex items-center justify-center gap-2">
-              <button
-                onClick={handleCopyLicense}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
-              >
-                {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
-                {copied ? "Copied!" : "Copy License"}
-              </button>
-              <button
-                onClick={handleDownloadLicense}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
-              >
-                <Download className="w-4 h-4" />
-                Download
-              </button>
-            </div>
           </ScrollReveal>
 
-          <p className="text-center text-muted leading-relaxed mb-6 max-w-2xl mx-auto">
-            The Voxelware Community License (VCL) is the source-available community license used by Voxelware Studios Community Edition projects.
-          </p>
-
-          <div className="grid sm:grid-cols-2 gap-3 mb-6 max-w-3xl mx-auto">
-            {[
-              "Source available",
-              "Modification permitted",
-              "Forks and derivative works permitted",
-              "Redistribution permitted under VCL",
-              "Attribution required",
-              "Public source repository required",
-              "Derivative-work disclosure required",
-              "Commercial monetization of derivatives requires permission",
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-2 text-sm">
-                <Check className="w-4 h-4 text-green-400 shrink-0" />
-                <span className="text-muted">{item}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex items-start gap-2 p-3 rounded-lg bg-yellow-500/10 border border-yellow-500/20 max-w-3xl mx-auto mb-8">
-            <AlertTriangle className="w-4 h-4 text-yellow-400 shrink-0 mt-0.5" />
-            <p className="text-sm text-yellow-200/80">
-              VCL is a proprietary source-available license and is not an OSI-approved open-source license.
-            </p>
-          </div>
-
-          <div className="flex justify-center mb-8">
-            <button
-              onClick={() => setVclExpanded(!vclExpanded)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 transition-all"
-            >
-              {vclExpanded ? (
-                <>
-                  <ChevronUp className="w-4 h-4" />
-                  Hide Full License
-                </>
-              ) : (
-                <>
-                  <ChevronDown className="w-4 h-4" />
-                  View Full License
-                </>
-              )}
-            </button>
-          </div>
-
-          {vclExpanded && (
-            <div className="grid lg:grid-cols-4 gap-8">
-              <ScrollReveal direction="left" className="lg:col-span-1">
-                <nav className="sticky top-24 glass-strong rounded-xl p-4 max-h-[70vh] overflow-y-auto">
-                  <h3 className="text-sm font-semibold mb-3 px-3">Sections</h3>
-                  <div className="space-y-1">
-                    {communitySections.map((section) => (
-                      <button
-                        key={section.id}
-                        onClick={() => {
-                          setActiveSection(section.id)
-                          document
-                            .getElementById(section.id)
-                            ?.scrollIntoView({ behavior: "smooth" })
-                        }}
-                        className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-left transition-all ${
-                          activeSection === section.id
-                            ? "bg-primary/10 text-primary font-medium"
-                            : "text-muted hover:text-white hover:bg-white/5"
-                        }`}
-                      >
-                        <section.icon className="w-3.5 h-3.5 shrink-0" />
-                        {section.title}
-                      </button>
-                    ))}
-                  </div>
-                </nav>
-              </ScrollReveal>
-
-              <div className="lg:col-span-3 space-y-8">
-                {communitySections.map((section, i) => (
-                  <motion.div
-                    key={section.id}
-                    id={section.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.03 }}
-                    viewport={{ once: true }}
-                    className="glass rounded-xl p-8 scroll-mt-24"
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <section.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <h2 className="text-xl font-bold">{section.title}</h2>
-                    </div>
-                    <div className="text-muted leading-relaxed whitespace-pre-line">
-                      {section.content}
-                    </div>
-                  </motion.div>
-                ))}
-
-                <motion.div className="glass rounded-xl p-8 border-primary/20 bg-primary/5">
-                  <p className="text-center text-sm text-muted italic">
-                    By using, modifying, or redistributing the Software, you acknowledge that you have read, understood, and agree to be bound by the Voxelware Community License.
-                  </p>
-                </motion.div>
-
-                <div className="flex items-center justify-center gap-2 pt-4">
-                  <button
-                    onClick={handleCopyLicense}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
-                  >
-                    {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
-                    {copied ? "Copied!" : "Copy License"}
-                  </button>
-                  <button
-                    onClick={handleDownloadLicense}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download
-                  </button>
+          <div className="grid lg:grid-cols-4 gap-8">
+            <ScrollReveal direction="left" className="lg:col-span-1">
+              <nav className="sticky top-24 glass-strong rounded-xl p-4 max-h-[70vh] overflow-y-auto">
+                <h3 className="text-sm font-semibold mb-3 px-3">Sections</h3>
+                <div className="space-y-1">
+                  {communitySections.map((section) => (
+                    <button
+                      key={section.id}
+                      onClick={() => {
+                        setActiveSection(section.id)
+                        document
+                          .getElementById(section.id)
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }}
+                      className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-left transition-all ${
+                        activeSection === section.id
+                          ? "bg-primary/10 text-primary font-medium"
+                          : "text-muted hover:text-white hover:bg-white/5"
+                      }`}
+                    >
+                      <section.icon className="w-3.5 h-3.5 shrink-0" />
+                      {section.title}
+                    </button>
+                  ))}
                 </div>
+              </nav>
+            </ScrollReveal>
+
+            <div className="lg:col-span-3 space-y-8">
+              {communitySections.map((section, i) => (
+                <motion.div
+                  key={section.id}
+                  id={section.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.03 }}
+                  viewport={{ once: true }}
+                  className="glass rounded-xl p-8 scroll-mt-24"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <section.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h2 className="text-xl font-bold">{section.title}</h2>
+                  </div>
+                  <div className="text-muted leading-relaxed whitespace-pre-line">
+                    {section.content}
+                  </div>
+                </motion.div>
+              ))}
+
+              <motion.div className="glass rounded-xl p-8 border-primary/20 bg-primary/5">
+                <p className="text-center text-sm text-muted italic">
+                  By using, modifying, or redistributing the Software, you acknowledge that you have read, understood, and agree to be bound by the Voxelware Community License.
+                </p>
+              </motion.div>
+
+              <div className="flex items-center justify-center gap-2 pt-4">
+                <button
+                  onClick={handleCopyLicense}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
+                >
+                  {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
+                  {copied ? "Copied!" : "Copy License"}
+                </button>
+                <button
+                  onClick={handleDownloadLicense}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium glass-strong hover:bg-white/10 transition-all"
+                >
+                  <Download className="w-4 h-4" />
+                  Download
+                </button>
               </div>
             </div>
-          )}
+          </div>
             </>
           )}
         </div>
